@@ -6,13 +6,13 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:09:15 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/22 11:22:13 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:00:21 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	set_screen_size(t_fractol *f)
+void	set_screen_size(t_fractol *f)
 {
 	if (ft_strncmp("M", f->name, 1) == 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:39:43 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/22 13:36:49 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:38:13 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,10 @@ void		draw_fractal(t_fractol	*f);
 int			julia_set(t_fractol *f);
 void		init(t_fractol *fractol);
 double		ft_atof(char *str);
-void		help_msg();
+void		help_msg(void);
 void		parse_args(int argc, char **argv, t_fractol *fractol);
 void		handle_mouse(double xdelta, double ydelta, void *param);
 void		zoom(t_fractol *fractol, int x, int y, double zoom_factor);
+void		set_screen_size(t_fractol *f);
 
 #endif

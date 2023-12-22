@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:42:30 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/22 13:36:58 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:12:28 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	draw_fractal(t_fractol	*f)
 {
-
 	mlx_delete_image(f->img.mlx, f->img.img);
 	f->img.img = mlx_new_image(f->img.mlx, WIDTH, HEIGHT);
 	mlx_image_to_window(f->img.mlx, f->img.img, 0, 0);
@@ -25,16 +24,16 @@ void	draw_fractal(t_fractol	*f)
 		f->y = 0;
 		while (f->y < HEIGHT)
 		{
-			f->pr = f->min_r + (double)f->x * (f->max_r - f->min_r) / WIDTH;
+			f->pr = f->min_r + ((double)f->x * (f->max_r - f->min_r)) / WIDTH;
 			f->pi = f->max_i + (double)f->y * (f->min_i - f->max_i) / HEIGHT;
 			if (ft_strncmp("M", f->name, 1) == 0)
 				f->n = mandelbrot_set(f);
 			else if (ft_strncmp("J", f->name, 1) == 0)
 				f->n = julia_set(f);
-			mlx_put_pixel(f->img.img, f->x, f->y, get_rgba(f->n * 2, f->n * 2 / 3, f->n * 3 / 2, 255));
+			mlx_put_pixel(f->img.img, f->x, f->y, get_rgba(f->n * 2, f->n * 2 / \
+			3, f->n * 3 / 2, 255));
 			f->y++;
 		}
 		f->x++;
 	}
 }
-

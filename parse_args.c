@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:47:33 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/16 11:37:32 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:33:06 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	parse_args(int argc, char **argv, t_fractol *fractol)
 	{
 		set_fractal(fractol, argc, argv);
 	}
-
 }
 
 static void	set_fractal(t_fractol *f, int ac, char **av)
@@ -40,7 +39,7 @@ static void	set_fractal(t_fractol *f, int ac, char **av)
 
 static void	set_julia_constants(t_fractol *f, int ac, char **av)
 {
-	if (ac < 5 && ac !=3)
+	if (ac < 5 && ac != 3)
 	{
 		f->j_ci = ft_atof(av[2]);
 		if (f->j_ci == -42 || f->j_ci > 2.0 || f->j_ci < -2.0)

@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:00:05 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/16 11:35:43 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/22 14:35:03 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static int	skip_space(char *str, int *is_negative)
 	return (i);
 }
 
-
 double	ft_atof(char *str)
 {
 	int		i;
@@ -60,7 +59,7 @@ double	ft_atof(char *str)
 		d = d * 0.1;
 		i++;
 	}
-	if (str[i]&& !ft_isdigit(str[i]))
+	if (str[i] && !ft_isdigit(str[i]))
 		return (-42);
 	return (ret * is_negative);
 }
