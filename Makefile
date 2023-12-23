@@ -36,7 +36,8 @@ SRCS	:=	fractol.c \
 			utils.c \
 			draw_fractal.c \
 			controls/zoom.c \
-			controls/mouse.c
+			controls/mouse.c \
+			controls/keyboard.c
 OBJS	:= ${SRCS:.c=.o}
 
 all: libmlx $(LIBFT) $(FT_PRINTF) $(NAME)

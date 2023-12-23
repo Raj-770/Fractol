@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 14:51:36 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 17:27:50 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:45:43 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 	init(&fractol);
 	draw_fractal(&fractol);
 	mlx_scroll_hook(img.mlx, &handle_mouse, &fractol);
+	mlx_key_hook(img.mlx, &handel_keyboard, &fractol);
 	mlx_loop(fractol.img.mlx);
 	mlx_terminate(fractol.img.mlx);
 	return (EXIT_SUCCESS);
