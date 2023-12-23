@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:19:28 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 16:10:30 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:31:10 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ void	help_msg(void)
 	ft_printf("\nFor Julia, you may specify starting values which should be betw\
 	een -2.0 and 2.0.\n");
 	ft_printf("\e[36mUsage example:\t");
-	ft_printf("./fractol J\n\t\t./fractol J 0.285 0.01\e[0m\n\n");
+	ft_printf("./fractol J\n\t\t./fractol J 0.285 0.01\n");
+	ft_printf("\t\t./fractol J -0.4 0.6\n");
+	ft_printf("\t\t./fractol J -1.476 0.0\n");
+	ft_printf("\t\t./fractol J 0.3 -0.01\e[0m\n\n");
 }

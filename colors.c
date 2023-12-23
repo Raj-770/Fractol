@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:15:20 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 17:44:37 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:17:28 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,9 @@ int	get_psychedelic_color(t_fractol *f)
 {
 	if (f->n == MAX_ITERATIONS)
 		return (get_rgba(0, 0, 0, 255));
-	f->cs.hue = (f->n * 360) / 10 + f->cs.shift * 2;
-	f->cs.saturation = (f->n * 255) / 10;
-	f->cs.brightness = (f->n * 255) / 10;
+	f->cs.hue = (f->n * 360) / f->cs.contrast + f->cs.shift * 2;
+	f->cs.saturation = (f->n * 255) / f->cs.contrast;
+	f->cs.brightness = (f->n * 255) / f->cs.contrast;
 	f->cs.c = (255 - absolute(2 * f->cs.brightness - 255)) * f->cs.saturation / \
 	255;
 	f->cs.x = f->cs.c * (1 - absolute((f->cs.hue / 60) % 2 - 1));

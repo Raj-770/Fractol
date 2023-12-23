@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:09:15 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 17:30:10 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:16:40 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,24 @@ void	set_screen_size(t_fractol *f)
 	}
 }
 
+static void	init_cs(t_color_scheme *cs)
+{
+	cs->shift = -999;
+	cs->r_set = 0;
+	cs->g_set = 0;
+	cs->b_set = 0;
+	cs->hue = 0;
+	cs->saturation = 0;
+	cs->brightness = 0;
+	cs->contrast = 100;
+	cs->c = 0;
+	cs->x = 0;
+	cs->m = 0;
+	cs->r = 0;
+	cs->g = 0;
+	cs->b = 0;
+}
+
 void	init(t_fractol *fractol)
 {
 	fractol->x = 0;
@@ -44,22 +62,9 @@ void	init(t_fractol *fractol)
 	fractol->m_zr = 0;
 	fractol->error = 0;
 	fractol->n = 0;
+	fractol->zoom_factor = 1.48;
 	set_screen_size(fractol);
+	init_cs(&fractol->cs);
 }
 
-void	init_cs(t_color_scheme *cs)
-{
-	cs->shift = 50;
-	cs->r_set = 0;
-	cs->g_set = 0;
-	cs->b_set = 0;
-	cs->hue = 0;
-	cs->saturation = 0;
-	cs->brightness = 0;
-	cs->c = 0;
-	cs->x = 0;
-	cs->m = 0;
-	cs->r = 0;
-	cs->g = 0;
-	cs->b = 0;
-}
+

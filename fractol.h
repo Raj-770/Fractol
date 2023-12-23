@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:39:43 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 16:18:50 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:20:46 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # endif
 
 # ifndef MAX_ITERATIONS
-#  define MAX_ITERATIONS 255
+#  define MAX_ITERATIONS 100
 # endif
 
 typedef struct s_img
@@ -47,6 +47,7 @@ typedef struct s_color_scheme
 	int	hue;
 	int	saturation;
 	int	brightness;
+	int	contrast;
 	int	c;
 	int	x;
 	int	m;
@@ -72,6 +73,7 @@ typedef struct s_fractol
 	double			pr;
 	int				error;
 	int				n;
+	double			zoom_factor;
 	t_color_scheme	cs;
 }	t_fractol;
 

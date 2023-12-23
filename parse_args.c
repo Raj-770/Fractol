@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:47:33 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 17:28:15 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:22:39 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ static void	set_julia_constants(t_fractol *f, int ac, char **av)
 {
 	if (ac < 5 && ac != 3)
 	{
-		f->j_ci = ft_atof(av[2]);
+		f->j_cr = ft_atof(av[2]);
 		if (f->j_ci == -42 || f->j_ci > 2.0 || f->j_ci < -2.0)
 			f->error = -1;
-		f->j_cr = ft_atof(av[3]);
+		f->j_ci = ft_atof(av[3]);
 		if (f->j_cr == -42 || f->j_ci > 2.0 || f->j_ci < -2.0)
 			f->error = -1;
 	}
