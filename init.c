@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:09:15 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 13:21:24 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 17:30:10 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	set_screen_size(t_fractol *f)
 {
-	if (ft_strncmp("M", f->name, 1) == 0)
-	{
-		f->min_r = -2.5;
-		f->max_r = 2.5;
-		f->min_i = -2.5;
-		f->max_i = 2.5;
-	}
-	else if (ft_strncmp("J", f->name, 1) == 0)
+	if (ft_strncmp("J", f->name, 1) == 0)
 	{
 		f->min_r = -2.0;
 		f->max_r = 2.0;
 		f->min_i = -2.0;
 		f->max_i = 2.0;
+	}
+	else
+	{
+		f->min_r = -4.0;
+		f->max_r = 4.0;
+		f->min_i = -4.0;
+		f->max_i = f->min_i + (f->max_r - f->min_r) * HEIGHT / WIDTH;
 	}
 }
 
@@ -34,8 +34,6 @@ void	init(t_fractol *fractol)
 {
 	fractol->x = 0;
 	fractol->y = 0;
-	fractol->j_ci = -0.090000;
-	fractol->j_cr = -0.766667;
 	fractol->max_i = 0;
 	fractol->max_r = 0;
 	fractol->min_i = 0;

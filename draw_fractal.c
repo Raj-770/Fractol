@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:42:30 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 12:49:32 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 16:20:33 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ void	draw_fractal(t_fractol	*f)
 				f->n = mandelbrot_set(f);
 			else if (ft_strncmp("J", f->name, 1) == 0)
 				f->n = julia_set(f);
+			else if (ft_strncmp("T", f->name, 1) == 0)
+				f->n = tricorn_set(f);
+			else
+				f->error = -1;
 			mlx_put_pixel(f->img.img, f->x, f->y, get_psychedelic_color(f));
 			f->y++;
 		}

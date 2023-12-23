@@ -29,6 +29,7 @@ SRCS	:=	fractol.c \
 			init.c \
 			fractals/mandelbrot.c \
 			fractals/julia.c \
+			fractals/tricorn.c \
 			colors.c \
 			messages.c \
 			parse_args.c \

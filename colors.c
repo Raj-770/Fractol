@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:15:20 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 13:17:36 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 17:44:37 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,14 @@ int	get_psychedelic_color(t_fractol *f)
 {
 	if (f->n == MAX_ITERATIONS)
 		return (get_rgba(0, 0, 0, 255));
-	f->cs.hue = (f->n * 360) / MAX_ITERATIONS + f->cs.shift * 2;
-	f->cs.saturation = (f->n * 255) / MAX_ITERATIONS;
-	f->cs.brightness = (f->n * 255) / MAX_ITERATIONS;
-	f->cs.m = f->cs.brightness - f->cs.c / 2;
-	f->cs.c = (255 - absolute(2 * f->cs.brightness - 255)) * f->cs.saturation / 255;
+	f->cs.hue = (f->n * 360) / 10 + f->cs.shift * 2;
+	f->cs.saturation = (f->n * 255) / 10;
+	f->cs.brightness = (f->n * 255) / 10;
+	f->cs.c = (255 - absolute(2 * f->cs.brightness - 255)) * f->cs.saturation / \
+	255;
 	f->cs.x = f->cs.c * (1 - absolute((f->cs.hue / 60) % 2 - 1));
+	f->cs.m = f->cs.brightness - f->cs.c / 2;
 	set_rgb(&f->cs);
-	return (get_rgba(f->cs.r + f->cs.m, f->cs.g + f->cs.m, f->cs.b + f->cs.m, 255));
+	return (get_rgba(f->cs.r + f->cs.m, f->cs.g + f->cs.m, f->cs.b + f->cs.m, \
+	255));
 }

@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:39:43 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 13:02:07 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 16:18:50 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,18 @@ typedef struct s_img
 	mlx_image_t	*img;
 }	t_img;
 
-
 typedef struct s_color_scheme
 {
 	int	shift;
 	int	r_set;
 	int	g_set;
 	int	b_set;
-	int hue;
-	int saturation;
-	int brightness;
-	int c;
-	int x;
-	int m;
+	int	hue;
+	int	saturation;
+	int	brightness;
+	int	c;
+	int	x;
+	int	m;
 	int	r;
 	int	g;
 	int	b;
@@ -87,5 +86,6 @@ void		handle_mouse(double xdelta, double ydelta, void *param);
 void		zoom(t_fractol *fractol, int x, int y, double zoom_factor);
 void		set_screen_size(t_fractol *f);
 int			get_psychedelic_color(t_fractol *f);
+int			tricorn_set(t_fractol *f);
 
 #endif

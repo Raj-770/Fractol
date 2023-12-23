@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   julia.c                                            :+:      :+:    :+:   */
+/*   tricorn.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 10:57:34 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 16:21:40 by rpambhar         ###   ########.fr       */
+/*   Created: 2023/12/23 16:15:15 by rpambhar          #+#    #+#             */
+/*   Updated: 2023/12/23 16:15:24 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
-int	julia_set(t_fractol *f)
+int	tricorn_set(t_fractol *f)
 {
 	int		n;
-	double	temp;
+	double	zr;
+	double	zi;
+	double	tmp;
 
+	zr = f->pr;
+	zi = f->pi;
 	n = 0;
 	while (n < MAX_ITERATIONS)
 	{
-		if ((f->pi * f->pi + f->pr * f->pr) > 4.0)
+		if ((zr * zr + zi * zi) > 4.0)
 			break ;
-		temp = 2 * f->pr * f->pi + f->j_ci;
-		f->pr = f->pr * f->pr - f->pi * f->pi + f->j_cr;
-		f->pi = temp;
+		tmp = -2 * zr * zi + f->pi;
+		zr = zr * zr - zi * zi + f->pr;
+		zi = tmp;
 		n++;
 	}
 	return (n);

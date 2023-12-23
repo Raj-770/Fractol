@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 08:21:11 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/22 14:03:29 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 16:26:04 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ void	handle_mouse(double xdelta, double ydelta, void *param)
 		zoom(fractol, mouse_x, mouse_y, zoom_level);
 	else if (ydelta > 0)
 		zoom(fractol, mouse_x, mouse_y, 1 / zoom_level);
-	printf("From function mouse_handel: %f\n", fractol->max_r);
 	draw_fractal(fractol);
 }

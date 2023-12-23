@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 14:51:36 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 12:53:01 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 17:27:50 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ int	main(int argc, char **argv)
 	img.mlx = mlx_init(WIDTH, HEIGHT, "Fractol", true);
 	img.img = mlx_new_image(img.mlx, WIDTH, HEIGHT);
 	if (!img.img)
-		return (0);
+		return (1);
 	fractol.img = img;
 	parse_args(argc, argv, &fractol);
 	if (fractol.error == -1)
-		ft_printf("%d", fractol.error);
+	{
+		help_msg();
+		return (1);
+	}
 	help_msg();
 	init(&fractol);
 	draw_fractal(&fractol);

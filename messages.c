@@ -6,7 +6,7 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:19:28 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/22 14:13:59 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/23 16:10:30 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	help_msg(void)
 	ft_printf("Which fractal would you like to see?\n");
 	ft_printf("M - Mandelbrot    ");
 	ft_printf("J - Julia    ");
-	ft_printf("M - Mandelbox\n\n");
+	ft_printf("T - Tricorn\n\n");
 	ft_printf("\e[36mUsage example:\t./fractol <type>\n\t\t./fractol M\e[0m\n\n"\
 	);
 	ft_printf("\nFor Julia, you may specify starting values which should be betw\
