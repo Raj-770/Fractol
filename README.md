@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fractol is a simple fractal visualization program written in C using the MiniLibX graphics library. It supports three types of fractals: Mandelbrot, Julia, and Tricorn. The program allows users to explore and interact with these fascinating mathematical patterns.
+Fractol is a simple fractal visualization program written in C using the MLX42 graphics library. It supports three types of fractals: Mandelbrot, Julia, and Tricorn. The program allows users to explore and interact with these fascinating mathematical patterns.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ Fractol is a simple fractal visualization program written in C using the MiniLib
 
 ### Prerequisites
 
-Ensure you have the MiniLibX library installed. The program relies on this library for graphics handling.
+Ensure you have the cmake tool which is required to install the MLX42 library. The program relies on this library for graphics handling. If you are unable to install MLX42, then use the archive file provided in the lib folder, you just need to make few small changes in the makefile.
 
 ### Compiling the Program
 
