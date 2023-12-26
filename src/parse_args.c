@@ -6,11 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:47:33 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:22:39 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:33:06 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 static void	set_fractal(t_fractol *f, int ac, char **av);
 static void	set_julia_constants(t_fractol *f, int ac, char **av);

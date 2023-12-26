@@ -6,11 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:19:28 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:31:10 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:33:03 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 void	help_msg(void)
 {

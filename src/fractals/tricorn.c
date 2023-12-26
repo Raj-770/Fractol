@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mandelbrot.c                                       :+:      :+:    :+:   */
+/*   tricorn.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 10:41:42 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/16 13:57:24 by rpambhar         ###   ########.fr       */
+/*   Created: 2023/12/23 16:15:15 by rpambhar          #+#    #+#             */
+/*   Updated: 2023/12/26 14:32:16 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "../../includes/fractol.h"
 
-int	mandelbrot_set(t_fractol *f)
+int	tricorn_set(t_fractol *f)
 {
 	int		n;
-	double	temp;
+	double	zr;
+	double	zi;
+	double	tmp;
 
+	zr = f->pr;
+	zi = f->pi;
 	n = 0;
-	f->m_zi = 0;
-	f->m_zr = 0;
 	while (n < MAX_ITERATIONS)
 	{
-		if ((f->m_zr * f->m_zr + f->m_zi * f->m_zi) > 4.0)
+		if ((zr * zr + zi * zi) > 4.0)
 			break ;
-		temp = 2 * f->m_zr * f->m_zi + f->pi;
-		f->m_zr = f->m_zr * f->m_zr - f->m_zi * f->m_zi + f->pr;
-		f->m_zi = temp;
+		tmp = -2 * zr * zi + f->pi;
+		zr = zr * zr - zi * zi + f->pr;
+		zi = tmp;
 		n++;
 	}
 	return (n);

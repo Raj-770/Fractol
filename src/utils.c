@@ -6,11 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:00:05 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/22 14:35:03 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:33:10 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 static int	is_space(int c)
 {

@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   keyboard.c                                         :+:      :+:    :+:   */
+/*   julia.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/23 19:41:10 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:46:20 by rpambhar         ###   ########.fr       */
+/*   Created: 2023/12/11 10:57:34 by rpambhar          #+#    #+#             */
+/*   Updated: 2023/12/26 14:32:08 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "../../includes/fractol.h"
 
-void	handel_keyboard(mlx_key_data_t key, void *param)
+int	julia_set(t_fractol *f)
 {
-	t_fractol	*fractol;
+	int		n;
+	double	temp;
 
-	fractol = (t_fractol *)param;
-	if (key.key == MLX_KEY_ESCAPE)
+	n = 0;
+	while (n < MAX_ITERATIONS)
 	{
-		mlx_delete_image(fractol->img.mlx, fractol->img.img);
-		mlx_close_window(fractol->img.mlx);
-		mlx_terminate(fractol->img.mlx);
-		exit(EXIT_SUCCESS);
+		if ((f->pi * f->pi + f->pr * f->pr) > 4.0)
+			break ;
+		temp = 2 * f->pr * f->pi + f->j_ci;
+		f->pr = f->pr * f->pr - f->pi * f->pi + f->j_cr;
+		f->pi = temp;
+		n++;
 	}
+	return (n);
 }

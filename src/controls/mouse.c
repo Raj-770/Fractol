@@ -6,11 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 08:21:11 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:05:45 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:31:57 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "../../includes/fractol.h"
 
 void	handle_mouse(double xdelta, double ydelta, void *param)
 {

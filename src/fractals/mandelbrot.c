@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   julia.c                                            :+:      :+:    :+:   */
+/*   mandelbrot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 10:57:34 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:18:02 by rpambhar         ###   ########.fr       */
+/*   Created: 2023/12/11 10:41:42 by rpambhar          #+#    #+#             */
+/*   Updated: 2023/12/26 14:32:12 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../fractol.h"
+#include "../../includes/fractol.h"
 
-int	julia_set(t_fractol *f)
+int	mandelbrot_set(t_fractol *f)
 {
 	int		n;
 	double	temp;
 
 	n = 0;
+	f->m_zi = 0;
+	f->m_zr = 0;
 	while (n < MAX_ITERATIONS)
 	{
-		if ((f->pi * f->pi + f->pr * f->pr) > 4.0)
+		if ((f->m_zr * f->m_zr + f->m_zi * f->m_zi) > 4.0)
 			break ;
-		temp = 2 * f->pr * f->pi + f->j_ci;
-		f->pr = f->pr * f->pr - f->pi * f->pi + f->j_cr;
-		f->pi = temp;
+		temp = 2 * f->m_zr * f->m_zi + f->pi;
+		f->m_zr = f->m_zr * f->m_zr - f->m_zi * f->m_zi + f->pr;
+		f->m_zi = temp;
 		n++;
 	}
 	return (n);

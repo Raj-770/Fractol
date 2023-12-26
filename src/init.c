@@ -6,11 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:09:15 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:16:40 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:45:04 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 void	set_screen_size(t_fractol *f)
 {
@@ -46,6 +46,7 @@ static void	init_cs(t_color_scheme *cs)
 	cs->r = 0;
 	cs->g = 0;
 	cs->b = 0;
+	cs->palette = 0;
 }
 
 void	init(t_fractol *fractol)
@@ -66,5 +67,3 @@ void	init(t_fractol *fractol)
 	set_screen_size(fractol);
 	init_cs(&fractol->cs);
 }
-
-

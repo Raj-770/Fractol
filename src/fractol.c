@@ -6,12 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 14:51:36 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:45:43 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:32:54 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
-#include "stdio.h"
+#include "../includes/fractol.h"
 
 int	main(int argc, char **argv)
 {

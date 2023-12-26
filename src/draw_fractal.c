@@ -6,11 +6,11 @@
 /*   By: rpambhar <rpambhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:42:30 by rpambhar          #+#    #+#             */
-/*   Updated: 2023/12/23 16:20:33 by rpambhar         ###   ########.fr       */
+/*   Updated: 2023/12/26 14:32:39 by rpambhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
 void	draw_fractal(t_fractol	*f)
 {

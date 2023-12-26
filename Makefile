@@ -25,19 +25,20 @@ INC		:=	-I $(LIBMLX)/include\
 			-I ./lib/ft_printf\
 
 
-SRCS	:=	fractol.c \
-			init.c \
-			fractals/mandelbrot.c \
-			fractals/julia.c \
-			fractals/tricorn.c \
-			colors.c \
-			messages.c \
-			parse_args.c \
-			utils.c \
-			draw_fractal.c \
-			controls/zoom.c \
-			controls/mouse.c \
-			controls/keyboard.c
+SRCS	:=	src/fractol.c \
+			src/init.c \
+			src/fractals/mandelbrot.c \
+			src/fractals/julia.c \
+			src/fractals/tricorn.c \
+			src/colors/colors.c \
+			src/colors/color_shift.c \
+			src/messages.c \
+			src/parse_args.c \
+			src/utils.c \
+			src/draw_fractal.c \
+			src/controls/zoom.c \
+			src/controls/mouse.c \
+			src/controls/keyboard.c
 OBJS	:= ${SRCS:.c=.o}
 
 all: libmlx $(LIBFT) $(FT_PRINTF) $(NAME)
@@ -70,6 +71,7 @@ clean:
 	@rm -rf $(OBJS)
 	@rm -rf $(LIBMLX)/build
 	@make clean -sC $(LIBFT_PATH)
+	@make clean -sC $(FT_PRINTF_PATH)
 
 fclean: clean
 	@echo "Cleaning Fractol"
