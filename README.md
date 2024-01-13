@@ -93,9 +93,13 @@ The program provides various color schemes, and you can cycle through them using
 
 ![Screenshot 1](screenshots/screen_shot_3.png)
 
+![Screenshot 1](screenshots/screen_shot_7.png)
+
 ![Screenshot 1](screenshots/screen_shot_4.png)
 
 ![Screenshot 1](screenshots/screen_shot_5.png)
+
+![Screenshot 1](screenshots/screen_shot_8.png)
 
 
 ## Implementation Details
