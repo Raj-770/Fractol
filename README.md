@@ -126,10 +126,3 @@ The program generates fractals using the Mandelbrot, Julia, and Tricorn algorith
 
 The program responds to keyboard and mouse inputs for navigation and interaction. Keyboard controls move the fractal, while the mouse scroll controls zoom. Color schemes can be changed using the spacebar.
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
