@@ -83,6 +83,21 @@ For the Julia fractal, you can specify starting values as additional parameters.
 
 The program provides various color schemes, and you can cycle through them using the spacebar.
 
+## Screenshots
+
+![Screenshot 1](screenshots/screen_shot_6.png)
+
+![Screenshot 1](screenshots/screen_shot_1.png)
+
+![Screenshot 1](screenshots/screen_shot_2.png)
+
+![Screenshot 1](screenshots/screen_shot_3.png)
+
+![Screenshot 1](screenshots/screen_shot_4.png)
+
+![Screenshot 1](screenshots/screen_shot_5.png)
+
+
 ## Implementation Details
 
 ### File Structure
